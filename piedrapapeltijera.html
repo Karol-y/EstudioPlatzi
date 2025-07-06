@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Piedra, Papel o Tijera</title>
+        <script>
+            //función para generar números aleatorios
+            function aleatorio(min, max){
+                //fórmula para generar números aleatorios, dependiendo del rango que se escoja
+                return Math.floor(Math.random()*(max-min + 1) + min)
+            }
+            //1 es papel, 2 es piedra, 3 es tijera
+            let jugador = 0, pc = aleatorio(1, 3)
+            let min = 1, max = 3
+            jugador = prompt("Elije: 1 para Piedra, 2 para Papel, 3 para Tijera")
+            //alert("Elegiste " + jugador)
+            if(jugador == 1){
+                alert("Elegiste \u{1FAA8}")
+            } else if(jugador == 2){
+                alert("Elegiste \u{1F4F0}")
+            } else if(jugador == 3){
+                alert("Elegiste \u2702\uFE0F")
+            } else {
+                alert("Elegiste un valor equivocado")
+            }
+            if(pc == 1){
+                alert("Pc elige \u{1FAA8}")
+            } else if(pc == 2){
+                alert("Pc elige \u{1F4F0}")
+            } else if(pc == 3){
+                alert("Pc elige \u2702\uFE0F")
+            } else {
+                alert("Elegiste un valor equivocado")
+            }
+            //COMBATE
+            if(pc == jugador){
+                alert("¡TIE!")
+            } else if(jugador == 1 && pc == 3){
+                alert("¡YOU WON!")
+            } else if(jugador == 2 && pc == 1){
+                alert("¡YOU WON!")
+            } else if(jugador == 3 && pc == 2){
+                alert("¡YOU WON!")
+            } else{
+                alert("¡YOU LOSE!")
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Piedra, Papel o Tijera</h1>
+    </body>
+</html>
