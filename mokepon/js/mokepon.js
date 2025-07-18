@@ -13,6 +13,9 @@ function iniciarJuego(){
     botonAgua.addEventListener('click', ataqueAgua)
     let botonTierra = document.getElementById('boton-tierra')
     botonTierra.addEventListener('click', ataqueTierra)
+
+    let botonReiniciar = document.getElementById("boton-reiniciar")
+    botonReiniciar.addEventListener('click', reiniciarJuego)
 }
 
 function seleccionarMascotaJugador(){
@@ -120,6 +123,14 @@ function crearMensajeFinal(resultadoFinal){
     parrafo.innerHTML = resultadoFinal
 
     sectionMensajes.appendChild(parrafo)
+    
+    //disable sirve para deshabilitar
+    let botonFuego = document.getElementById('boton-fuego')
+    botonFuego.disabled = true
+    let botonAgua = document.getElementById('boton-agua')
+    botonAgua.disabled = true
+    let botonTierra = document.getElementById('boton-tierra')
+    botonTierra.disabled = true
 }
 
 function crearMensaje(resultado){
@@ -129,6 +140,11 @@ function crearMensaje(resultado){
     parrafo.innerHTML = 'Tu mascota atacó con ' + ataqueJugador + ', la mascota del enemigo atacó con ' + ataqueEnemigo  + ' - ' + resultado
 
     sectionMensajes.appendChild(parrafo)
+}
+
+function reiniciarJuego(){
+    //función para recargar la página y tener el html inicial y location es para saber la locación en la que nos encontramos
+    location.reload()
 }
 
 window.addEventListener('load', iniciarJuego)
