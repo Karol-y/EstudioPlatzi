@@ -4,6 +4,13 @@ let vidasJugador = 3
 let vidasEnemigo = 3
 
 function iniciarJuego(){
+    let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
+    //display nos oculta partes de nuestro html
+    sectionSeleccionarAtaque.style.display = 'none'
+
+    let sectionReiniciar = document.getElementById('reiniciar')
+    sectionReiniciar.style.display = 'none'
+
     let botonMascotaJugador = document.getElementById('boton-mascota') 
     botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador)
 
@@ -14,11 +21,18 @@ function iniciarJuego(){
     let botonTierra = document.getElementById('boton-tierra')
     botonTierra.addEventListener('click', ataqueTierra)
 
-    let botonReiniciar = document.getElementById("boton-reiniciar")
+    let botonReiniciar = document.getElementById('boton-reiniciar')
     botonReiniciar.addEventListener('click', reiniciarJuego)
 }
 
 function seleccionarMascotaJugador(){
+    let sectionSeleccionarMascota = document.getElementById('seleccionar-mascota')
+    //'none' nos oculta lo que queremos en el html
+    sectionSeleccionarMascota.style.display = 'none'
+
+    let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
+    sectionSeleccionarAtaque.style.display = 'block'
+
     let inputHipodoge = document.getElementById('hipodoge')
     let inputCapipepo = document.getElementById('capipepo')
     let inputRatigueya = document.getElementById('ratigueya')
@@ -117,13 +131,17 @@ function revisarVidas(vidasEnemigo, vidasJugador){
 }
 
 function crearMensajeFinal(resultadoFinal){
+    let sectionReiniciar = document.getElementById('reiniciar')
+    //'block' nos muestra lo que queremos en el html
+    sectionReiniciar.style.display = 'block'
+
     let sectionMensajes = document.getElementById('mensajes')
 
     let parrafo = document.createElement('p')
     parrafo.innerHTML = resultadoFinal
 
     sectionMensajes.appendChild(parrafo)
-    
+
     //disable sirve para deshabilitar
     let botonFuego = document.getElementById('boton-fuego')
     botonFuego.disabled = true
