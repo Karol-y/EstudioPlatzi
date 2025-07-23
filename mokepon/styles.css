@@ -1,0 +1,22 @@
+/*diseño del juego mokepon
+
+página en donde puedo ver propiedades para css, se llama cssreference.io*/
+/*selector fifo, porque es el mismo nombre que tiene nuestra etiqueta html
+h1 {
+    cambio de color para el título,
+    vínculo entre el archivo de css y html, es conocido como selector
+    color: lightcoral;
+}*/
+/*selector tipo id, en este caso se debe pones un # antes del nombre
+#mokepon{
+    color: blueviolet;
+}*/
+
+/*selector clase, como es un selector de clase se le debe poner un (.) antes del nombre*/
+.titulo{
+    color: hotpink;
+    width: 330px; /*ancho*/
+    height: 50px; /*alto*/
+    background-color: lightblue; /*color de fondo*/
+}
+
