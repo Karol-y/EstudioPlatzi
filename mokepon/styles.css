@@ -20,3 +20,24 @@ h1 {
     background-color: lightblue; /*color de fondo*/
 }
 
+/*3 tipos de visualización
+tipo block, tipo inline, tipo inline-block*/
+
+label{/*tipo inline*/
+    background-color: tomato;
+    width: 330px; /*ancho*/
+    height: 50px; /*alto*/
+}
+
+input{/*tipo inline-block*/
+    background-color: aqua;
+    width: 330px; /*ancho*/
+    height: 50px; /*alto*/
+}
+
+button{
+    background-color: blueviolet;
+    width: 330px; /*ancho*/
+    height: 50px; /*alto*/
+}
+
