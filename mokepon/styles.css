@@ -15,29 +15,43 @@ h1 {
 /*selector clase, como es un selector de clase se le debe poner un (.) antes del nombre*/
 .titulo{
     color: hotpink;
-    width: 330px; /*ancho*/
+    width: 310px; /*ancho*/
     height: 50px; /*alto*/
-    background-color: lightblue; /*color de fondo*/
+    background-color: teal; /*color de fondo*/
 }
 
 /*3 tipos de visualización
 tipo block, tipo inline, tipo inline-block*/
 
-label{/*tipo inline*/
+/*label{ *tipo inline
     background-color: tomato;
-    width: 330px; /*ancho*/
-    height: 50px; /*alto*/
-}
+    width: 330px; /*ancho
+    height: 50px; /*alto
+}*/
 
-input{/*tipo inline-block*/
+/*input{tipo inline-block
     background-color: aqua;
-    width: 330px; /*ancho*/
-    height: 50px; /*alto*/
+    width: 330px; /*ancho
+    height: 50px; /*alto
+}*/
+
+/*button{
+    background-color: blueviolet;
+    width: 330px; /*ancho
+    height: 50px; /*alto
+}*/
+
+/*alineación de elementos con flexbox
+elementos padres: contenedores
+elementos hijos: están dentro de los contenedores*/
+/*el elemento padre puede tener el display: flex, puede utilizar justify-content*/
+/*el elemento hijo, puede cambiar el orden, tamaño*/
+
+#seleccionar-mascota{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
 
-button{
-    background-color: blueviolet;
-    width: 330px; /*ancho*/
-    height: 50px; /*alto*/
-}
 
